@@ -1,0 +1,80 @@
+# ============================================================
+# Bes语坊 (BesLang) - Python依赖包列表
+# 项目: 本地化AI语言处理工坊
+# 作者: Benson Laur
+# ============================================================
+
+# ====== Phase 0: 基础环境 (Day 1-4) ======
+
+# GUI框架
+PyQt6==6.6.1                    # Qt6 Python绑定
+PyQt6-Qt6==6.6.1                # Qt6核心库
+
+# 配置管理
+pyyaml==6.0.1                   # YAML配置文件读取
+python-dotenv==1.0.0            # 环境变量管理
+
+# 日志和工具
+loguru==0.7.2                   # 增强日志库（比logging更好用）
+colorama==0.4.6                 # 彩色终端输出（日志美化）
+
+# 文件处理
+pathlib2==2.3.7.post1           # 路径操作增强（Python 3.11已内置，但保留兼容）
+
+# ====== Phase 1: AI推理引擎 (Week 2-4) ======
+
+# ONNX Runtime（GPU加速）
+onnxruntime-gpu==1.16.3         # ONNX GPU推理（需要CUDA 11.8）
+# 注：如果GPU不可用，pip会自动fallback到CPU版本
+
+# 音视频处理
+pydub==0.25.1                   # 音频处理库
+librosa==0.10.1                 # 音频分析库
+soundfile==0.12.1               # 音频文件读写
+
+# ====== Phase 2: AI模型 (Week 5-10) ======
+
+# 语音识别（Whisper依赖）
+openai-whisper==20250625        # Whisper语音识别（已安装 2025-11-30）
+
+# PyTorch CUDA版（GPU加速，2.8GB）
+# 安装命令: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch==2.7.1+cu118              # PyTorch CUDA 11.8版（已安装 2025-11-30）
+torchvision==0.22.1+cu118       # 视觉库
+torchaudio==2.7.1+cu118         # 音频库
+
+# 机器翻译
+# transformers==4.35.2           # Hugging Face模型库（MarianMT）
+# sentencepiece==0.1.99          # 分词器
+
+# TTS语音合成
+# piper-tts==1.2.0               # Piper TTS引擎
+
+# 音色克隆
+# openvoice==1.0.0               # OpenVoice音色克隆
+
+# 音频分离
+# demucs==4.0.1                  # Demucs音频分离
+
+# ====== 开发工具 ======
+
+# 代码质量
+# pytest==7.4.3                  # 单元测试框架
+# black==23.12.0                 # 代码格式化
+# flake8==6.1.0                  # 代码检查
+# mypy==1.7.1                    # 类型检查
+
+# ====== 依赖说明 ======
+#
+# 安装顺序：
+# 1. Phase 0 基础依赖（现在）
+# 2. Phase 1 ONNX Runtime（Week 2）
+# 3. Phase 2 AI模型依赖（Week 5+）
+#
+# GPU加速说明：
+# - onnxruntime-gpu 需要 CUDA 11.8
+# - 如果CUDA不可用，手动安装: pip install onnxruntime
+#
+# 安装命令：
+# pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+#
