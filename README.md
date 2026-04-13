@@ -2,7 +2,7 @@
 
 > 一款本地化的视频字幕识别与翻译工具。完全在你的电脑上运行,不依赖任何在线服务,保护隐私,无需订阅。
 
-**BesLang 延续了作者 2017 年开源的 [BesLyric](https://github.com/BensonLaur/BesLyric-for-X) 项目的命名传承——同一位开发者对"用工具解决自己真实需求"这件事的第二次尝试。**
+**BesLang 延续了作者 2017 年开源的 [BesLyric](https://github.com/BesLyric-for-X/BesLyric-for-X) 项目的命名传承——同一位开发者对"用工具解决自己真实需求"这件事的第二次尝试。**
 
 ---
 
